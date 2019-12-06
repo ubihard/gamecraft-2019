@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class NoteObject : MonoBehaviour
 {
-
     public bool canBePressed;
 
     public KeyCode keyToPress;
 
-    public GameObject hitEffect, missEffect; 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject hitEffect, missEffect;
 
     // Update is called once per frame
     void Update()
@@ -26,11 +19,10 @@ public class NoteObject : MonoBehaviour
             {
                 gameObject.SetActive(false);
 
-                GameManager.instance.NoteHit();
+                RhythmManager.instance.NoteHit();
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
             }
         }
-        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -49,7 +41,7 @@ public class NoteObject : MonoBehaviour
 
             if (gameObject.activeSelf)
             {
-                GameManager.instance.NoteMiss();
+                RhythmManager.instance.NoteMiss();
                 Instantiate(missEffect, transform.position, hitEffect.transform.rotation);
             }
         }

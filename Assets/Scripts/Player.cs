@@ -1,13 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    public DamageEvent attackEvent;
-    public DamageEvent magicEvent;
-
     public BarItem attackBar;
     public BarItem defenseBar;
     public BarItem potionBar;
@@ -25,29 +21,20 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        if (attackEvent == null)
-        {
-            attackEvent = new DamageEvent();
-        }
-        if (magicEvent == null)
-        {
-            magicEvent = new DamageEvent();
-        }
-
         health = originalHealth;
         attack = originalAttack;
         defense = originalDefense;
         magic = originalMagic;
 
-        attackBar.filledEvent.AddListener(OnAttack);
-        defenseBar.filledEvent.AddListener(OnDefend);
-        potionBar.filledEvent.AddListener(OnHeal);
-        magicBar.filledEvent.AddListener(OnMagic);
+        EventManager.Instance.attackFilledEvent.AddListener(OnAttack);
+        EventManager.Instance.defenseFilledEvent.AddListener(OnDefend);
+        EventManager.Instance.potionFilledEvent.AddListener(OnHeal);
+        EventManager.Instance.magicFilledEvent.AddListener(OnMagic);
     }
 
     private void OnAttack()
     {
-        attackEvent.Invoke(attack);
+        EventManager.Instance.playerAttackEvent.Invoke(attack);
     }
 
     private void OnDefend()
@@ -68,7 +55,7 @@ public class Player : MonoBehaviour
 
     private void OnMagic()
     {
-        magicEvent.Invoke(magic);
+        EventManager.Instance.playerMagicEvent.Invoke(magic);
     }
 
     private void OnHit(int damage)
