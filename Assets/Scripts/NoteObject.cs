@@ -9,6 +9,8 @@ public class NoteObject : MonoBehaviour
 
     public KeyCode keyToPress;
 
+    public GameObject hitEffect, missEffect; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,9 @@ public class NoteObject : MonoBehaviour
             if (canBePressed)
             {
                 gameObject.SetActive(false);
+
+                GameManager.instance.NoteHit();
+                Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
             }
         }
         
@@ -41,6 +46,12 @@ public class NoteObject : MonoBehaviour
         if (collision.tag == "Activator")
         {
             canBePressed = false;
+
+            if (gameObject.activeSelf)
+            {
+                GameManager.instance.NoteMiss();
+                Instantiate(missEffect, transform.position, hitEffect.transform.rotation);
+            }
         }
     }
 }
