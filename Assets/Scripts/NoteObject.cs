@@ -17,7 +17,16 @@ public class NoteObject : MonoBehaviour
         {
             if (canBePressed)
             {
-                gameObject.SetActive(false);
+                if (transform.parent.tag == "Special") {
+                    Transform special = transform.parent;
+                    special.GetChild(0).gameObject.SetActive(false);
+                    special.GetChild(1).gameObject.SetActive(false);
+                    special.GetChild(2).gameObject.SetActive(false);
+                    special.GetChild(3).gameObject.SetActive(false);
+                } else
+                {
+                    gameObject.SetActive(false);
+                }
 
                 RhythmManager.instance.NoteHit();
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);

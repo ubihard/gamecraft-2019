@@ -13,11 +13,6 @@ public class BarItem : MonoBehaviour
         value = 0;
     }
 
-    public bool CanExecute()
-    {
-        return value == maxValue;
-    }
-
     public void AddToBar()
     {
         value += 1;

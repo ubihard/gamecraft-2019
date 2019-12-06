@@ -20,10 +20,22 @@ public class NoteGenerator : MonoBehaviour
         generateNoteMap();
     }
 
-    private void generateBeat(int index, float xTranslate)
+    private GameObject generateBeat(int index, float xTranslate)
     {
-        GameObject beat = Instantiate(notes[index], this.transform) as GameObject;
+        GameObject beat = Instantiate(notes[index], transform) as GameObject;
         beat.transform.position = new Vector3(startX + xTranslate, notes[index].transform.localPosition.y, 0);
+        return beat;
+    }
+
+    private void generateDecisionBeat(float xTranslate)
+    {
+        GameObject special = new GameObject();
+        special.tag = "Special";
+        special.transform.parent = transform;
+        generateBeat(0, xTranslate).transform.parent = special.transform;
+        generateBeat(1, xTranslate).transform.parent = special.transform;
+        generateBeat(2, xTranslate).transform.parent = special.transform;
+        generateBeat(3, xTranslate).transform.parent = special.transform;
     }
 
     void generateNoteMap() {
@@ -31,9 +43,15 @@ public class NoteGenerator : MonoBehaviour
         float currX = 0;
         for (int i = 0; i < numBeats / 20; i++)
         {
-            int[] ratios = { 8, 6, 2, 2, 2 };
+            int[] ratios = { 6, 6, 2, 2, 4 };
             List<int> indexList = new List<int> { 0, 1, 2, 3, 4 };
             int end = indexList.Count;
+            if (i % 6 == 0)
+            {
+                generateDecisionBeat(currX);
+                currX++;
+                ratios[1]--;
+            }
             while (end > 0)
             {
                 int index = rnd.Next(0, end);
