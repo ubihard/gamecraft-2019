@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ButtonController : MonoBehaviour
 {
+    public UnityEvent hitEvent;
 
     private SpriteRenderer spriteRenderer;
     public Sprite defaultImage;
@@ -15,6 +17,10 @@ public class ButtonController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (hitEvent == null)
+        {
+            hitEvent = new UnityEvent();
+        }
     }
 
     // Update is called once per frame
