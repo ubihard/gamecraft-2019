@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class RhythmManager : MonoBehaviour
 {
     public AudioSource music;
 
@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public BeatScroller beatScroller;
 
-    public static GameManager instance;
+    public static RhythmManager instance;
 
     public int currentScore;
     public int scorePerNote = 100;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-        scoreText.text = "Score: 0";  
+        scoreText.text = "Score: 0";
     }
 
     // Update is called once per frame
