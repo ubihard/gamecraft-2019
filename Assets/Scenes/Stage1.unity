@@ -131,10 +131,10 @@ GameObject:
   - component: {fileID: 42740290}
   - component: {fileID: 42740289}
   - component: {fileID: 42740291}
-  - component: {fileID: 42740292}
   - component: {fileID: 42740293}
+  - component: {fileID: 42740292}
   m_Layer: 0
-  m_Name: Buttons_Red
+  m_Name: Magic
   m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,7 +178,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1bbda9210988dfd4db252a09838d254f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87382d316ac6bad439399c4d1f40fd15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 42740288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 5.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125296781}
   m_RootOrder: 1
@@ -215,11 +215,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cae84cd732f60247926f06482cf350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 21300000, guid: 1bbda9210988dfd4db252a09838d254f, type: 3}
-  pressedImage: {fileID: 21300000, guid: cacc39dd2a4e88a43aadeddd73e9b1e2, type: 3}
+  defaultImage: {fileID: 21300000, guid: 87382d316ac6bad439399c4d1f40fd15, type: 3}
+  pressedImage: {fileID: 21300000, guid: e2a68792d50c96548894241494671331, type: 3}
   keyToPress: 115
---- !u!61 &42740292
-BoxCollider2D:
+--- !u!58 &42740292
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -232,18 +232,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84, y: 0.91}
-  m_EdgeRadius: 0
+  m_Radius: 0.48
 --- !u!50 &42740293
 Rigidbody2D:
   serializedVersion: 4
@@ -278,7 +268,7 @@ GameObject:
   - component: {fileID: 44988799}
   - component: {fileID: 44988798}
   m_Layer: 0
-  m_Name: S (2)
+  m_Name: Magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,7 +360,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75075e3e0480502488c03c187942b450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -394,7 +384,7 @@ GameObject:
   - component: {fileID: 155883998}
   - component: {fileID: 155883999}
   m_Layer: 0
-  m_Name: A
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,7 +442,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61927ba80895e38418275fc4d3d00536, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -587,7 +577,7 @@ GameObject:
   - component: {fileID: 269462113}
   - component: {fileID: 269462114}
   m_Layer: 0
-  m_Name: S
+  m_Name: Magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +635,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75075e3e0480502488c03c187942b450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -778,10 +768,10 @@ GameObject:
   - component: {fileID: 335185281}
   - component: {fileID: 335185280}
   - component: {fileID: 335185282}
-  - component: {fileID: 335185283}
   - component: {fileID: 335185284}
+  - component: {fileID: 335185283}
   m_Layer: 0
-  m_Name: Buttons_Yellow
+  m_Name: Potion
   m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -825,7 +815,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed2984e24d5df6f46a80ead6ad2964fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25eb7282cbd19964ca229d4226d458e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -845,7 +835,7 @@ Transform:
   m_GameObject: {fileID: 335185279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125296781}
   m_RootOrder: 2
@@ -862,11 +852,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cae84cd732f60247926f06482cf350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 21300000, guid: ed2984e24d5df6f46a80ead6ad2964fa, type: 3}
-  pressedImage: {fileID: 21300000, guid: 8f47ff751b3bdec48862adf0100c74fa, type: 3}
+  defaultImage: {fileID: 21300000, guid: 25eb7282cbd19964ca229d4226d458e8, type: 3}
+  pressedImage: {fileID: 21300000, guid: 4d3fcae51a6ee1f499b712d02db68ff9, type: 3}
   keyToPress: 100
---- !u!61 &335185283
-BoxCollider2D:
+--- !u!58 &335185283
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -879,18 +869,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84, y: 0.91}
-  m_EdgeRadius: 0
+  m_Radius: 0.48
 --- !u!50 &335185284
 Rigidbody2D:
   serializedVersion: 4
@@ -925,7 +905,7 @@ GameObject:
   - component: {fileID: 362361338}
   - component: {fileID: 362361337}
   m_Layer: 0
-  m_Name: A (2)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,7 +997,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61927ba80895e38418275fc4d3d00536, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1041,7 +1021,7 @@ GameObject:
   - component: {fileID: 390358757}
   - component: {fileID: 390358756}
   m_Layer: 0
-  m_Name: F (2)
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1133,10 +1113,10 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bea8dc8d8980e0b46ae795a7c79f3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -1155,10 +1135,10 @@ GameObject:
   - component: {fileID: 450328916}
   - component: {fileID: 450328915}
   - component: {fileID: 450328917}
-  - component: {fileID: 450328919}
   - component: {fileID: 450328918}
+  - component: {fileID: 450328919}
   m_Layer: 0
-  m_Name: Buttons_Blue
+  m_Name: Attack
   m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,7 +1182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ad187f74f2d0cc4499f39a0267b9eda8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23c61fad014894c46ae5dc8183ead5de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1222,7 +1202,7 @@ Transform:
   m_GameObject: {fileID: 450328914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 6.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125296781}
   m_RootOrder: 0
@@ -1239,8 +1219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cae84cd732f60247926f06482cf350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 21300000, guid: ad187f74f2d0cc4499f39a0267b9eda8, type: 3}
-  pressedImage: {fileID: 21300000, guid: 18bf226de2d59284e904c26430f659c9, type: 3}
+  defaultImage: {fileID: 21300000, guid: 23c61fad014894c46ae5dc8183ead5de, type: 3}
+  pressedImage: {fileID: 21300000, guid: 607512364805d244c9c338d9096420ec, type: 3}
   keyToPress: 97
 --- !u!50 &450328918
 Rigidbody2D:
@@ -1263,8 +1243,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &450328919
-BoxCollider2D:
+--- !u!58 &450328919
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1277,18 +1257,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84, y: 0.91}
-  m_EdgeRadius: 0
+  m_Radius: 0.48
 --- !u!1 &515992356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +1943,7 @@ GameObject:
   - component: {fileID: 1130016899}
   - component: {fileID: 1130016898}
   m_Layer: 0
-  m_Name: F (1)
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2065,10 +2035,10 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bea8dc8d8980e0b46ae795a7c79f3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -2166,7 +2136,7 @@ GameObject:
   - component: {fileID: 1165953031}
   - component: {fileID: 1165953032}
   m_Layer: 0
-  m_Name: D
+  m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2224,10 +2194,10 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a8cef84e29699943ad8dd88cd038805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -2436,7 +2406,7 @@ GameObject:
   - component: {fileID: 1403572453}
   - component: {fileID: 1403572454}
   m_Layer: 0
-  m_Name: F
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2480,10 +2450,10 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bea8dc8d8980e0b46ae795a7c79f3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -2552,7 +2522,7 @@ GameObject:
   - component: {fileID: 1410800194}
   - component: {fileID: 1410800195}
   m_Layer: 0
-  m_Name: F
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2610,10 +2580,10 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bea8dc8d8980e0b46ae795a7c79f3583, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -2668,7 +2638,7 @@ GameObject:
   - component: {fileID: 1443899286}
   - component: {fileID: 1443899287}
   m_Layer: 0
-  m_Name: A
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2726,7 +2696,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61927ba80895e38418275fc4d3d00536, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3443,7 +3413,7 @@ GameObject:
   - component: {fileID: 1934613168}
   - component: {fileID: 1934613167}
   m_Layer: 0
-  m_Name: A (1)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3535,7 +3505,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61927ba80895e38418275fc4d3d00536, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3559,7 +3529,7 @@ GameObject:
   - component: {fileID: 1948185959}
   - component: {fileID: 1948185958}
   m_Layer: 0
-  m_Name: S (1)
+  m_Name: Magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3651,7 +3621,7 @@ SpriteRenderer:
   m_SortingLayerID: 433599201
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfd072918779345aef76bf7e212b42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75075e3e0480502488c03c187942b450, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3673,10 +3643,10 @@ GameObject:
   - component: {fileID: 1954822627}
   - component: {fileID: 1954822626}
   - component: {fileID: 1954822628}
-  - component: {fileID: 1954822629}
   - component: {fileID: 1954822630}
+  - component: {fileID: 1954822629}
   m_Layer: 0
-  m_Name: Buttons_Green
+  m_Name: Shield
   m_TagString: Activator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3720,7 +3690,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3c13b1f8baa5dd4a86d3dc186668178, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb0ec50627683a54da0938534e74a2cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3740,7 +3710,7 @@ Transform:
   m_GameObject: {fileID: 1954822625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 2125296781}
   m_RootOrder: 3
@@ -3757,11 +3727,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cae84cd732f60247926f06482cf350d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultImage: {fileID: 21300000, guid: c3c13b1f8baa5dd4a86d3dc186668178, type: 3}
-  pressedImage: {fileID: 21300000, guid: 2d10ec486261df445b73774ff82f1b69, type: 3}
+  defaultImage: {fileID: 21300000, guid: fb0ec50627683a54da0938534e74a2cc, type: 3}
+  pressedImage: {fileID: 21300000, guid: 71eb5e0f2d433d6479ed1d06d30e53ce, type: 3}
   keyToPress: 102
---- !u!61 &1954822629
-BoxCollider2D:
+--- !u!58 &1954822629
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3774,18 +3744,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84, y: 0.91}
-  m_EdgeRadius: 0
+  m_Radius: 0.48
 --- !u!50 &1954822630
 Rigidbody2D:
   serializedVersion: 4
@@ -4125,7 +4085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125296781}
   m_Layer: 0
-  m_Name: Buttons
+  m_Name: Icons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
