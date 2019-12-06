@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Scripts/NoteObject.cs.meta
 guid: fa3b5e1e0be31324e9f135254eb34c3f
-=======
-guid: 1a055c9e845a24f0884c7f239ba68b12
->>>>>>> Link player with action bars and butttons:Assets/Scripts/AttackBar.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

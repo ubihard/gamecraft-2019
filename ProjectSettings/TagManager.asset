@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Activator
+  - Special
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3708482455
+    locked: 0
+  - name: Objects
+    uniqueID: 2049289083
+    locked: 0
+  - name: People
+    uniqueID: 279698885
+    locked: 0
+  - name: Rhythm
+    uniqueID: 3780614305
     locked: 0
   - name: Arrows
     uniqueID: 433599201
