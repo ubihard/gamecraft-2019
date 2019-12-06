@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DefenseBar : BarItem
 {
@@ -11,10 +12,18 @@ public class DefenseBar : BarItem
 
     void Update()
     {
+        Image bar = GetComponent<Image>();
+        bar.fillAmount = value * 0.2f;
         if (value == maxValue)
         {
-            EventManager.Instance.defenseFilledEvent.Invoke();
-            value = 0;
+            StartCoroutine(InvokeFilledDefense());
         }
+    }
+
+    IEnumerator InvokeFilledDefense()
+    {
+        yield return new WaitForSeconds(0.5f);
+        EventManager.Instance.defenseFilledEvent.Invoke();
+        value = 0;
     }
 }

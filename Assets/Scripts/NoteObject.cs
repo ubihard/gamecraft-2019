@@ -30,6 +30,22 @@ public class NoteObject : MonoBehaviour
 
                 RhythmManager.instance.NoteHit();
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+
+                switch (keyToPress)
+                {
+                    case KeyCode.A:
+                        EventManager.Instance.attackButtonHitEvent.Invoke();
+                        break;
+                    case KeyCode.S:
+                        EventManager.Instance.magicButtonHitEvent.Invoke();
+                        break;
+                    case KeyCode.D:
+                        EventManager.Instance.potionButtonHitEvent.Invoke();
+                        break;
+                    case KeyCode.F:
+                        EventManager.Instance.defenseButtonHitEvent.Invoke();
+                        break;
+                }
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BarItem : MonoBehaviour
 {
     public int maxValue = 5;
-    public int value { get; set; }
+    public float value { get; set; }
 
     // Start is called before the first frame update
     void Start()
