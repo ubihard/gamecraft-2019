@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class MenuButton : MonoBehaviour
 {
     void Start()
     {
         Button button = GetComponent<Button>();
-        button.onClick.AddListener(OnStart);
+        button.onClick.AddListener(OnReturn);
     }
 
-    void OnStart()
+    void OnReturn()
     {
-        SceneManager.LoadScene("Introduction");
+        SceneManager.LoadScene("Main Menu");
     }
 }
