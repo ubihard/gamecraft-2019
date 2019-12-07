@@ -34,12 +34,17 @@ public class Player : MonoBehaviour
 
     private void OnAttack()
     {
-        EventManager.Instance.playerAttackEvent.Invoke(attack);
+        EventManager.Instance.playerAttackEvent.Invoke(attack); 
+        PlayerMovement.attack = true;
+        GameObject.Instantiate(Resources.Load("AttackParticle"));
+        GameObject lightEffectThing = GameObject.Instantiate((GameObject) Resources.Load("AttackParticle"));
+        GameObject.Destroy(lightEffectThing, 1);
     }
 
     private void OnDefend()
     {
         defense += 2;
+        PlayerMovement.defend = true;
     }
 
     private void OnHeal()
@@ -51,11 +56,14 @@ public class Player : MonoBehaviour
         }
 
         health = finalHealth;
+
+        PlayerMovement.heal = true;
     }
 
     private void OnMagic()
     {
         EventManager.Instance.playerMagicEvent.Invoke(magic);
+        PlayerMovement.magic = true;
     }
 
     private void OnHit(int damage)

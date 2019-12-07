@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    public bool attack = false;
-    public bool defend = false;
-    public bool magic = false;
-    public bool heal = false;
+    public static bool attack = false;
+    public static bool defend = false;
+    public static bool magic = false;
+    public static bool heal = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,26 @@ public class PlayerMovement : MonoBehaviour
     {
         if (attack)
         {
-            animator.SetBool("isAttacking", true);
+            animator.SetTrigger("Attack");
+            attack = false;
+        } 
+
+        if (defend)
+        {
+            animator.SetTrigger("Defend");
+            defend = false;
+        }
+
+        if (magic)
+        {
+            animator.SetTrigger("Magic");
+            magic = false;
+        }
+
+        if (heal)
+        {
+            animator.SetTrigger("Heal");
+            heal = false;
         }
     }
 }
