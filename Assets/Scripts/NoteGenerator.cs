@@ -43,7 +43,7 @@ public class NoteGenerator : MonoBehaviour
         float currX = 0;
         for (int i = 0; i < numBeats / 20; i++)
         {
-            int[] ratios = { 6, 6, 2, 2, 4 };
+            int[] ratios = { 6, 4, 2, 2, 6 };
             List<int> indexList = new List<int> { 0, 1, 2, 3, 4 };
             int end = indexList.Count;
             if (i % 6 == 0)

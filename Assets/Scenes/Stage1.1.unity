@@ -7276,7 +7276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxValue: 5
-  originalFillInterval: 5
+  originalFillInterval: 1
 --- !u!1 &1217312879
 GameObject:
   m_ObjectHideFlags: 0
