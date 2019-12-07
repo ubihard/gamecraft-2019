@@ -14,6 +14,6 @@ public class MenuButton : MonoBehaviour
 
     void OnReturn()
     {
-        SceneManager.LoadScene("Game Over");
+        SceneManager.LoadScene("Main Menu");
     }
 }
