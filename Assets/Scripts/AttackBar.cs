@@ -16,13 +16,8 @@ public class AttackBar : BarItem
         bar.fillAmount = value * 0.2f;
         if (value == maxValue)
         {
-            StartCoroutine(InvokeFilledAttack());
+            value = 0;
+            EventManager.Instance.attackFilledEvent.Invoke();
         }
-    }
-    IEnumerator InvokeFilledAttack()
-    {
-        yield return new WaitForSeconds(0.5f);
-        EventManager.Instance.attackFilledEvent.Invoke();
-        value = 0;
     }
 }

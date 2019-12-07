@@ -16,14 +16,8 @@ public class PotionBar : BarItem
         bar.fillAmount = value * 0.2f;
         if (value == maxValue)
         {
-            StartCoroutine(InvokeFilledPotion());
+            value = 0;
+            EventManager.Instance.potionFilledEvent.Invoke();
         }
-    }
-
-    IEnumerator InvokeFilledPotion()
-    {
-        yield return new WaitForSeconds(0.5f);
-        EventManager.Instance.potionFilledEvent.Invoke();
-        value = 0;
     }
 }

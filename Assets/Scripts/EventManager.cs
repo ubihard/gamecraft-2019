@@ -23,8 +23,10 @@ public class EventManager : MonoBehaviour
     public UnityEvent defenseFilledEvent;
     public UnityEvent potionFilledEvent;
     public UnityEvent magicFilledEvent;
+    public UnityEvent bossAttackFilledEvent;
     public DamageEvent playerAttackEvent;
     public DamageEvent playerMagicEvent;
+    public DamageEvent bossAttackEvent;
     public UnityEvent attackButtonHitEvent;
     public UnityEvent defenseButtonHitEvent;
     public UnityEvent potionButtonHitEvent;
@@ -46,22 +48,26 @@ public class EventManager : MonoBehaviour
         defenseFilledEvent = new UnityEvent();
         potionFilledEvent = new UnityEvent();
         magicFilledEvent = new UnityEvent();
+        bossAttackFilledEvent = new UnityEvent();
         playerAttackEvent = new DamageEvent();
         playerMagicEvent = new DamageEvent();
+        bossAttackEvent = new DamageEvent();
         attackButtonHitEvent = new UnityEvent();
         defenseButtonHitEvent = new UnityEvent();
         potionButtonHitEvent = new UnityEvent();
         magicButtonHitEvent = new UnityEvent();
     }
 
-    void Onable()
+    void OnDisable()
     {
         attackFilledEvent = null;
         defenseFilledEvent = null;
         potionFilledEvent = null;
         magicFilledEvent = null;
+        bossAttackFilledEvent = null;
         playerAttackEvent = null;
         playerMagicEvent = null;
+        bossAttackEvent = null;
         attackButtonHitEvent = null;
         defenseButtonHitEvent = null;
         potionButtonHitEvent = null;
