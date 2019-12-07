@@ -36,9 +36,6 @@ public class Player : MonoBehaviour
     {
         EventManager.Instance.playerAttackEvent.Invoke(attack); 
         PlayerMovement.attack = true;
-        GameObject.Instantiate(Resources.Load("AttackParticle"));
-        GameObject lightEffectThing = GameObject.Instantiate((GameObject) Resources.Load("AttackParticle"));
-        GameObject.Destroy(lightEffectThing, 1);
     }
 
     private void OnDefend()
