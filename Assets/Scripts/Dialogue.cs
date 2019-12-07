@@ -9,12 +9,13 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textDisplay;
     public string[] sentences;
     private int index;
-    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    int currentSceneIndex;
     public float typingSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(Type());
     }
 
