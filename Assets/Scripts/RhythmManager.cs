@@ -7,8 +7,6 @@ public class RhythmManager : MonoBehaviour
 {
     public AudioSource music;
 
-    public bool startPlaying;
-
     public BeatScroller beatScroller;
 
     public static RhythmManager instance;
@@ -24,21 +22,9 @@ public class RhythmManager : MonoBehaviour
         instance = this;
 
         scoreText.text = "Score: 0";
-    }
+        beatScroller.hasStarted = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!startPlaying)
-        {
-            if (Input.anyKeyDown)
-            {
-                startPlaying = true;
-                beatScroller.hasStarted = true;
-
-                music.Play();
-            }
-        }
+        music.Play();
     }
 
     public void NoteHit()

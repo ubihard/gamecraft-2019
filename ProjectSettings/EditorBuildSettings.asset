@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 0
+    path: Assets/Porforever/Demo/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: 8bc8e6798d4d35f42a8ab19eda76eb5b
+  - enabled: 1
+    path: Assets/Scenes/Stage1.1.unity
+    guid: fabfa94181b194d7e811f5071dc14ab9
+  - enabled: 1
+    path: Assets/Scenes/Stage1.1 (Decision).unity
+    guid: a2865af6dae4a1a4996d0fa6ffff7bda
   m_configObjects: {}
