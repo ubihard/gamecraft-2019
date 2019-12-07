@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public int originalDefense = 0;
     public int originalMagic = 50;
 
-    private int health;
+    public int health;
     private int attack;
     private int defense;
     private int magic;
@@ -30,11 +30,12 @@ public class Player : MonoBehaviour
         EventManager.Instance.defenseFilledEvent.AddListener(OnDefend);
         EventManager.Instance.potionFilledEvent.AddListener(OnHeal);
         EventManager.Instance.magicFilledEvent.AddListener(OnMagic);
+        EventManager.Instance.bossAttackEvent.AddListener(OnHit);
     }
 
     private void OnAttack()
     {
-        EventManager.Instance.playerAttackEvent.Invoke(attack); 
+        EventManager.Instance.playerAttackEvent.Invoke(attack);
         PlayerMovement.attack = true;
     }
 
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour
     private void OnHit(int damage)
     {
         int finalDamage = damage - defense;
+        Debug.Log("BOSS DAMAGED USER");
         if (damage < 3)
         {
             finalDamage = 3;

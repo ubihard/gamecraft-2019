@@ -1357,6 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853fe2901b2e34cb682ae9b39ff5750f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalHealth: 600
   health: 600
   attack: 8
   defense: 20
@@ -7199,6 +7200,7 @@ GameObject:
   - component: {fileID: 1204973856}
   - component: {fileID: 1204973858}
   - component: {fileID: 1204973857}
+  - component: {fileID: 1204973859}
   m_Layer: 5
   m_Name: Image (10)
   m_TagString: Untagged
@@ -7261,6 +7263,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204973855}
   m_CullTransparentMesh: 0
+--- !u!114 &1204973859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204973855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a5844c703204a998fccdb251fbd08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxValue: 5
+  originalFillInterval: 1
 --- !u!1 &1217312879
 GameObject:
   m_ObjectHideFlags: 0
@@ -12025,7 +12041,7 @@ GameObject:
   - component: {fileID: 1790274587}
   - component: {fileID: 1790274586}
   m_Layer: 5
-  m_Name: EnemyAttackBar (1)
+  m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13999,6 +14015,7 @@ GameObject:
   - component: {fileID: 2045822644}
   - component: {fileID: 2045822646}
   - component: {fileID: 2045822645}
+  - component: {fileID: 2045822647}
   m_Layer: 5
   m_Name: HitMeter
   m_TagString: Untagged
@@ -14062,6 +14079,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045822643}
   m_CullTransparentMesh: 0
+--- !u!114 &2045822647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045822643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6a7ee4f0d854e3f9dcd71d5fc09b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2115970143}
 --- !u!1 &2072038530
 GameObject:
   m_ObjectHideFlags: 0
@@ -14386,6 +14416,7 @@ GameObject:
   - component: {fileID: 2113898993}
   - component: {fileID: 2113898995}
   - component: {fileID: 2113898994}
+  - component: {fileID: 2113898996}
   m_Layer: 5
   m_Name: Image (10)
   m_TagString: Untagged
@@ -14448,6 +14479,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113898992}
   m_CullTransparentMesh: 0
+--- !u!114 &2113898996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113898992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63546ead7feee4ff8a6fc1f0b5e5bc65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 218682000}
 --- !u!1 &2115970142
 GameObject:
   m_ObjectHideFlags: 0
@@ -14480,14 +14524,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91142ab22ed7b4816a6d9f488b92ae3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackBar: {fileID: 0}
-  defenseBar: {fileID: 0}
-  potionBar: {fileID: 0}
-  magicBar: {fileID: 0}
+  attackBar: {fileID: 377295003}
+  defenseBar: {fileID: 145131841}
+  potionBar: {fileID: 599260456}
+  magicBar: {fileID: 1278516023}
   originalHealth: 100
   originalAttack: 70
   originalDefense: 0
   originalMagic: 50
+  health: 0
 --- !u!212 &2115970144
 SpriteRenderer:
   m_ObjectHideFlags: 0

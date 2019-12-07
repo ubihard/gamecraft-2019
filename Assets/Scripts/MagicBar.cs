@@ -16,14 +16,8 @@ public class MagicBar : BarItem
         bar.fillAmount = value * 0.2f;
         if (value == maxValue)
         {
-            StartCoroutine(InvokeFilledMagic());
+            value = 0;
+            EventManager.Instance.magicFilledEvent.Invoke();
         }
-    }
-
-    IEnumerator InvokeFilledMagic()
-    {
-        yield return new WaitForSeconds(0.5f);
-        EventManager.Instance.magicFilledEvent.Invoke();
-        value = 0;
     }
 }

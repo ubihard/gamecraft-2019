@@ -16,14 +16,8 @@ public class DefenseBar : BarItem
         bar.fillAmount = value * 0.2f;
         if (value == maxValue)
         {
-            StartCoroutine(InvokeFilledDefense());
+            value = 0;
+            EventManager.Instance.defenseFilledEvent.Invoke();
         }
-    }
-
-    IEnumerator InvokeFilledDefense()
-    {
-        yield return new WaitForSeconds(0.5f);
-        EventManager.Instance.defenseFilledEvent.Invoke();
-        value = 0;
     }
 }
